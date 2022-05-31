@@ -1,37 +1,63 @@
 :root {
     --lightbrown: #F4E2D4;
-    --golden: #F4D47C;
-    --orange: #FC8426;
-    --green: #00850F;
+    --golden: #F3DC95;
+    --orange: #A04703;
+    --green: #00750E;
+    --white: #FFFF;
 
     --font-family1: 'Sora', sans-serif;
 
     --font-size1: 1.24rem;
+    --font-size2: 1.15rem;
 
     --font-weight1: 800;
+    --font-weight2: 700;
 }
 
-::placeholder,
-:-ms-input-placeholder {
-    color: var(--orange)
-}
 
-main {
-    /* background-color: var(--orange); */
-    height: 100vh;
+/*COLOR*/
+    /*bgcolor -lightbrown*/
+nav,footer,.navlist{
+    background-color: var(--lightbrown);
 }
+    /*bgcolor -orange*/
+main,.highlight,.nav-link:hover, .highlight:hover{
+    background-color: var(--orange);
+}
+    /*color -orange*/
+.nav-link,.navbar-toggler, .footer-text{
+    color: var(--orange) !important;
+}
+    /*bordercolor -orange*/
+.navbar-toggler{
+    border-color:var(--orange)!important;
+}
+    /*color -white*/
+.dropdown-item{
+    color:var(--white);
+}   
+    /*color -yellow*/
+.highlight:hover, .nav-link:hover{
+    color: var(--golden) !important;
+}
+    /*bgcolor -green*/
+#navsearchbtn,.dropdown-menu{
+    background-color: var(--green);
+}
+/*COLOR*/
 
 /*NAVBAR*/
-/*NAVBAR element*/
+    /*NAVBAR element*/
+main {
+    height: 100vh;
+}
 nav {
-    background-color: var(--lightbrown);
     padding: 0rem 3rem !important;
     height: 4.5rem;
 }
 
-/*NAVBAR class*/
+    /*NAVBAR class*/
 .nav-link {
-    color: var(--orange) !important;
     font-family: var(--font-family1);
     font-size: var(--font-size1);
     font-weight: var(--font-weight1);
@@ -40,84 +66,136 @@ nav {
 .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
+    margin-right: 2rem;
 }
 
 .navbar-nav {
-    width: 50%;
+    display: flex;
     justify-content: space-between;
+    padding-inline-start: 0 !important;
     align-items: center;
+    width: 50%;
 }
 
 .navlist {
-    background-color: var(--lightbrown);
-
-}
-.highlight{
-    
-    background-color: var(--orange);
-    color:var(--golden) !important;    
-    height: 4.5rem;
-    border-radius: 0.7rem 0.7rem 0 0;
-    display: flex;
-    align-items: center;
-}
-/*NAVBAR element:pseudo-class*/
-.form-control:focus, .btn:focus,.btn:active,.btn:checked{
-    color:#212529;
-    background-color:#fff;
-    outline:0;
-    box-shadow:0 0 0 .25rem rgba(252, 132, 38,0.25)
-}
-.nav-link:hover{
-    color:var(--green) !important;
+    justify-content: space-between;
 }
 
-/*NAVBAR element id*/
+.highlight {
+    width: 100%;
+    color: var(--golden) !important;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+        /*DROPDOWN MENU*/
+
+.dropdown-menu {
+    border-radius: 0 0 0.4rem 0.4rem;
+    border: 0;
+    width: 30vh;
+    padding: 0.5rem 0.5rem;
+}
+
+.dropdown-item {
+    font-size: var(--font-size2);
+    font-weight: var(--font-weight2);
+}
+
+
+
+    /*NAVBAR element:pseudo-class*/
+.form-control:focus,
+.btn:focus,
+.btn:active,
+.btn:checked {
+    color: #212529;
+    background-color: var(--white);
+    outline: 0;
+    box-shadow: 0 0 0.75rem .15rem var(--orange);
+}
+.nav-link:hover {
+    width: 100%;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+    /*NAVBAR element id*/
 #logo {
     height: 2em;
-    width: auto;
 }
-
 #navsearch {
     border-radius: 1.5rem 0 0 1.5rem;
-    width:20em;
 }
-
 #navsearchbtn {
     border-radius: 0 1.5rem 1.5rem 0;
-    background-color: var(--green);
     border: 0.1rem solid var(--green);
-    color: #FFFFFF;
+    color: var(--white);
 }
-#navsearch,#navsearchbtn{
+
+#searchform {
+    width: 30%;
+    margin-left: 2rem;
+}
+
+#navbarSupportedContent {
+    justify-content: space-between;
+}
+
+#nav #navsearch,
+#navsearchbtn {
     border: 0.1rem solid var(--orange);
 }
 
 /*Media Query*/
-@media (max-width:1262px) {
-    #navsearch {
-        width:15em;
+@media (max-width:1156px) {
+    .navbar-nav {
+        width: auto;
     }
-}
 
-@media (max-width:1080px) {
-    #navsearch {
-        width:12em;
+    #searchform {
+        margin-left: 1rem;
     }
+
+    .navbar-brand {
+        margin-right: 1rem;
+    }
+
 }
 
 @media(max-width:991px) {
     nav {
-        padding: 0.6rem 0rem !important;
+        padding: 1rem 0 2rem 0 !important
     }
+
     .navbar-toggler {
         margin: 0 3rem;
     }
+
     #logo {
         margin: 0 3rem;
     }
-    .navbar-nav{
+
+    #searchform {
+        margin-left: 0rem;
+        width: auto;
+    }
+
+    .navbar-nav {
         align-items: unset;
     }
-    
+    .nav-link{
+        margin: 0.25rem 0;
+    }
+    .highlight {
+        padding-left: 1rem;
+    }
+    .nav-link:hover{
+        padding-left: 1rem;
+    }
+
+    #navbarSupportedContent {
+        padding: 1.5rem 3rem;
+    }
+    .dropdown-menu {
+        width: auto;
+    }
 }
