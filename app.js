@@ -22,6 +22,12 @@ app.use(methodOverride('_method'))
 app.get('/', (req, res) => {
     res.render('bagotayo/index');
 })
+app.get('/contact', (req, res) => {
+    res.render('bagotayo/contact');
+})
+app.get('/forum', (req, res) => {
+    res.render('bagotayo/forum');
+})
 app.listen(3000, () => {
     console.log("Serving on port 3000");
 })
