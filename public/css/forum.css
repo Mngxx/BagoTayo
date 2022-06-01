@@ -23,11 +23,11 @@ body {
     background-color: var(--orange);
 }
 
-hr.new1 { 
+.new1 { 
     border-top: 3px solid var(--lightbrown);
   } 
 
-hr.new2 {
+.new2 {
     border-top: 3px solid #F4E2D4;
     width: 70%;
     margin-left: auto;
@@ -52,7 +52,7 @@ h1 {
     font-weight: bold;
   }
 
-p {
+.cat {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -61,18 +61,27 @@ p {
     color: var(--golden);
 }
 
-p1 {
-    position: absolute;
-    width: 168px;
-    height: 50px;
-    left: 518px;
-    top: 229px;
-    font-weight: bold;
-    font-size: 2rem;
+
+.cat {
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
     align-items: center;
-    display: flex;
-    text-align: center;
+    letter-spacing: 0.465em;
     color: var(--golden);
+    text-align: center;
+}
+
+.posts {
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    align-items: center;
+    letter-spacing: 0.465em;
+    color: var(--lightbrown);
+    text-align: center;
 }
 
 h2 {
@@ -85,60 +94,11 @@ h2 {
     color: var(--golden);
 }
 
-/* #main {
-    border-radius: 25px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid black; 
-    align-items: center;
-  }
-*/
-
-#main {
-    position: absolute;
-    width: 375px;
-    height: 308px;
-    left: 248px;
-    top: 488px;
-    background: #F4E2D4;
-    border: 1px solid #F4E39E;
+.search {
+    height: 342px;
+    width: 50%px; 
+    background-color: var(--golden);
     border-radius: 9px;
-}
-
-#main1 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 375px;
-    height: 308px;
-    left: 657px;
-    top: 488px;
-    background: #F4E2D4;
-    border-radius: 9px;
-}
-
-#main2 {
-    box-sizing: border-box;
-    position: absolute;
-    width: 375px;
-    height: 308px;
-    left: 1174px;
-    top: 488px;
-    background: #F4E2D4;
-    border: 1px solid #F4E39E;
-    border-radius: 9px;
-}
-
-.searchbar{
-    box-sizing: border-box;
-    position: absolute;
-    width: 310px;
-    height: 36px;
-    left: 1020px;
-    top: 228px;
-    background: #F4D47C;
-    border: 1px solid #FC8426;
-    border-radius: 102px;
 
 }
 

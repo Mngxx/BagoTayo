@@ -1,22 +1,16 @@
 <% layout('layouts/boilerplate') %>
 <main class="container-fluid">
- <!-- 
-    <head>
-        <title>Contact</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      </head>
--->
+
     <link rel="stylesheet" href="css/contact.css">
     <hr> 
 
-    <p> Send us a Message! </p>
-    <div class = "rectangle" > </div>
-    <h> Have something to say? Contact Us! </h>
+  <div class = "row">  
+    <div class="col-6"> 
+      <h1 class="contact"> Have something to say? Contact Us! </h1> 
+    </div>
 
+    <div class="col-6">
+      <p> Send us a Message! </p>
     <div class="container">
         <!-- <form action="/action_page.php">  -->
           <div class="form-group">
@@ -35,9 +29,14 @@
             <label for="msg"></label>
             <input type="message" class="form-control" id="msg" placeholder="Message" name="msg">
           </div>
+          <br>
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
       </div>
+    </div>
+
+  </div>
+  
       
 
     

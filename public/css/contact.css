@@ -27,31 +27,37 @@ hr {
     border-top: 1px solid var(--lightbrown);
 }
 
-div {
-    color:aqua;
+.container {
+    height: 342px;
+    width: 564px; 
+    background-color: var(--golden);
+    border-radius: 9px;
 }
 
 
-
-
-/*
 p {
-    position: absolute;
-    width: 923px;
-    height: 55px;
-    left: 746px;
-    top: 174px;
     font-family: 'Gothic A1';
     font-style: normal;
     font-weight: 700;
     font-size: 35px;
-    line-height: 44px;
-    display: flex;
     align-items: center;
     letter-spacing: 0.465em;
     color: #F4D47C;
+    text-align: center;
 }
 
+.contact {
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    align-items: center;
+    letter-spacing: 0.465em;
+    color: #F4D47C;
+    text-align: center;
+}
+
+/*
 h {
     position: absolute;
     width: 669px;
@@ -68,6 +74,7 @@ h {
     letter-spacing: 0.44em;
     color: #F4D47C;
 }
+
 
 .rectangle {
     box-sizing: border-box;
@@ -143,15 +150,5 @@ button {
     border: 6px solid #FC8426;
     border-radius: 101px;
 }
-
-input {
-    box-sizing: border-box;
-    width: 229px;
-    height: 41px;
-    left: 569px;
-    top: 302px;
-    background: #F4E2D4;
-    border: 1px solid var(--orange);
-    border-radius: 102px;
-  }
+  
 */
