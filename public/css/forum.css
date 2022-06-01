@@ -1,9 +1,26 @@
+:root {
+    --lightbrown: #F4E2D4;
+    --golden: #F3DC95;
+    --brown: #A04703;
+    --green: #00750E;
+    --white: #FFFF;
+    --orange: #FC8426;
+
+    --font-family1: 'Sora', sans-serif;
+
+    --font-size1: 1.24rem;
+    --font-size2: 1.15rem;
+
+    --font-weight1: 800;
+    --font-weight2: 700;
+}
+
 body {
-    background-color: #FC8426;
+    background-color: var(--brown);
 }
 
 hr.new1 { 
-    border-top: 3px solid #F4E2D4;
+    border-top: 3px solid var(--lightbrown);
   } 
 
 hr.new2 {
@@ -14,7 +31,7 @@ hr.new2 {
 }
 #rcorners {
     border-radius: 15px;
-    background: #F4D47C;
+    background: var(--golden);
     padding: 25px; 
     width: 210px;
     height: 75px;  
@@ -23,7 +40,7 @@ hr.new2 {
 h1 {
     display: block;
     font-size: 2rem;
-    color: #FC8426 ;
+    color: var(--orange);
     margin-top: 0.75em;
     margin-bottom: 1.75em;
     margin-left: 0;
@@ -37,19 +54,22 @@ p {
     margin-right: auto;
     font-weight: bold;
     font-size: 2rem;
-    color: #F4D47C;
+    color: var(--golden);
 }
 
-/*p1 {
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
+p1 {
+    position: absolute;
+    width: 168px;
+    height: 50px;
+    left: 518px;
+    top: 229px;
     font-weight: bold;
     font-size: 2rem;
-    color: #F4D47C;
-    direction: ltr;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: var(--golden);
 }
-*/
 
 h2 {
     width: 70%;
@@ -58,5 +78,63 @@ h2 {
     font-weight: bold;
     font-size: 3rem;
     text-align: center;
-    color: #F4D47C;
+    color: var(--golden);
 }
+
+/* #main {
+    border-radius: 25px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black; 
+    align-items: center;
+  }
+*/
+
+#main {
+    position: absolute;
+    width: 375px;
+    height: 308px;
+    left: 248px;
+    top: 488px;
+    background: #F4E2D4;
+    border: 1px solid #F4E39E;
+    border-radius: 9px;
+}
+
+#main1 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 375px;
+    height: 308px;
+    left: 657px;
+    top: 488px;
+    background: #F4E2D4;
+    border-radius: 9px;
+}
+
+#main2 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 375px;
+    height: 308px;
+    left: 1174px;
+    top: 488px;
+    background: #F4E2D4;
+    border: 1px solid #F4E39E;
+    border-radius: 9px;
+}
+
+.searchbar{
+    box-sizing: border-box;
+    position: absolute;
+    width: 310px;
+    height: 36px;
+    left: 1020px;
+    top: 228px;
+    background: #F4D47C;
+    border: 1px solid #FC8426;
+    border-radius: 102px;
+
+}
+

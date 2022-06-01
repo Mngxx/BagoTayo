@@ -1,9 +1,10 @@
 :root {
     --lightbrown: #F4E2D4;
     --golden: #F3DC95;
-    --orange: #A04703;
+    --brown: #A04703;
     --green: #00750E;
     --white: #FFFF;
+    --orange: #FC8426;
 
     --font-family1: 'Sora', sans-serif;
 
@@ -14,7 +15,6 @@
     --font-weight2: 700;
 }
 
-
 /*COLOR*/
     /*bgcolor -lightbrown*/
 nav,footer,.navlist{
@@ -22,7 +22,7 @@ nav,footer,.navlist{
 }
     /*bgcolor -orange*/
 main,.highlight,.nav-link:hover, .highlight:hover{
-    background-color: var(--orange);
+    background-color: var(--brown);
 }
     /*color -orange*/
 .nav-link,.navbar-toggler, .footer-text{
