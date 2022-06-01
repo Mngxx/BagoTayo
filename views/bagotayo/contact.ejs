@@ -1,4 +1,47 @@
 <% layout('layouts/boilerplate') %>
 <main class="container-fluid">
-    <h1>Contact</h1>
+ <!-- 
+    <head>
+        <title>Contact</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+-->
+    <link rel="stylesheet" href="css/contact.css">
+    <hr> 
+
+    <p> Send us a Message! </p>
+    <div class = "rectangle" > </div>
+    <h> Have something to say? Contact Us! </h>
+
+    <div class="container">
+        <!-- <form action="/action_page.php">  -->
+          <div class="form-group">
+            <label for="name"></label>
+            <input type="name" class="form-control" id="name" placeholder="Name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="email"></label>
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="pnun"></label>
+            <input type="pnum" class="form-control" id="pnum" placeholder="Phone Number" name="pnum">
+          </div>
+          <div class="form-group">
+            <label for="msg"></label>
+            <input type="message" class="form-control" id="msg" placeholder="Message" name="msg">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+      
+
+    
+
+    
+
 </main>
