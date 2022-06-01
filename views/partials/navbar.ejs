@@ -7,30 +7,31 @@
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link highlight" aria-current="page" href="#">HOME</a>
+                    <a class="nav-link <% if (nav_hl == "home") { %>highlight <% } %>" aria-current="page" href="/">HOME</a> 
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">ABOUT</a>
+                    <a class="nav-link <% if (nav_hl == "about") { %>highlight <% } %>" href="/about">ABOUT</a>
                 </li>
                 <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle <% if (nav_hl == "resources") { %>highlight <% } %>" href="/resources" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         RESOURCES
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Templates</a></li>
-                        <li><a class="dropdown-item" href="#">Videos</a></li>
-                        <li><a class="dropdown-item" href="#">Publication</a></li>
+                        <li><a class="dropdown-item" href="/resources">Templates</a></li>
+                        <li><a class="dropdown-item" href="/resources">Videos</a></li>
+                        <li><a class="dropdown-item" href="/resources">Publication</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">FORUM</a>
+                    <a class="nav-link <% if (nav_hl == "forum") { %>highlight <% } %>" href="/forum">FORUM</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CONTACT</a>
+                    <a class="nav-link <% if (nav_hl == "contact") { %>highlight <% } %>" href="/contact">CONTACT</a>
                 </li>
             </ul>
             <form class="d-flex" id="searchform" role="search">
