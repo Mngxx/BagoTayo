@@ -1,0 +1,17 @@
+.dl_btn{
+    border-radius: 50%;
+    padding:.5rem;
+    background-color: var(--green);
+    color:var(--white);
+}
+.dl_cont{
+    display: flex;
+    align-items: center;
+}
+.dl_cont > p{
+    margin:auto 0;
+    font-weight: 700;
+}
+.dl_cont:not(:last-child){
+    margin-bottom: 0.5rem !important;
+}

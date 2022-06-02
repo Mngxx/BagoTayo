@@ -1,0 +1,30 @@
+main{
+    font-family:var(--font-family1);
+    font-size:var(--font-size3);
+}
+.title {
+    position: relative;
+    background: var(--golden);
+    color: var(--orange);
+    overflow: hidden;
+}
+.title-text{
+    font-family: var(--font-family2);
+    font-size: var(--font-size_title_text);
+    letter-spacing: 1rem;
+    margin: 1rem 1.25rem 1rem 3.5rem;
+}
+.title-p {
+    font-family: var(--font-family1);
+    font-weight: var(--font-weight3);
+    font-size: var(--font-size_title_p);
+    margin: 1rem 5rem 1rem 8rem;  
+    text-align: right;
+}
+.title>svg {
+    display: block;
+    fill: var(--orange);
+}
+.header{
+    margin: 0 var(--margin-header_lr) var(--margin-header_tb) var(--margin-header_lr);
+}
