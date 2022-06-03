@@ -1,3 +1,38 @@
+:root {
+    --lightbrown: #F4E2D4;
+    --golden: #F3DC95;
+    --orange: #A04703;
+    --green: #00750E;
+    --white: #FFFF;
+    --black:#212529;
+    --logo_blue: #02BFE8;
+    --logo_red: #EF2341;
+    --logo_orange: #FD8326;
+
+    --font-family1: 'Sora', sans-serif;
+    --font-family2: 'Righteous', cursive;
+
+    --font-size_title_text: 5rem;
+    --font-size_title_p: 2rem;
+    --font-size_header: 2.5rem;
+    --font-size1: 1.24rem;
+    --font-size2: 1.15rem;
+    --font-size3: 1.1rem;
+
+    --font-weight1: 800;
+    --font-weight2: 700;
+    --font-weight3: 600;
+    --font-weight4: 400;
+    --font-weight5: 300;
+    --font-weight6: 100;
+
+
+    --bord-rad_header:5rem;
+
+    --margin-header_lr:9rem;
+    --margin-header_tb:2rem;
+    --margin-body_lr:10rem;
+}
 
 body {
     background-color: var(--orange);
@@ -7,128 +42,33 @@ hr {
     border-top: 1px solid var(--lightbrown);
 }
 
+.message {
+    margin-top: 78px;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    align-items: center;
+    letter-spacing: 0.465em;
+    color: #F4D47C;
+}
+
 .container {
-    height: 342px;
+    height: 349px;
     width: 564px; 
     background-color: var(--golden);
     border-radius: 9px;
-}
-
-
-p {
-    font-family: 'Gothic A1';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 35px;
-    align-items: center;
-    letter-spacing: 0.465em;
-    color: #F4D47C;
-    text-align: center;
+    margin-top: 12px;
+    margin-left: 12px;
 }
 
 .contact {
-    font-family: 'Gothic A1';
+    margin-top: 220px;
+    margin-left: 12px;
+    font-family: 'Sora';
     font-style: normal;
     font-weight: 700;
-    font-size: 35px;
-    align-items: center;
+    font-size: 50px;
     letter-spacing: 0.465em;
     color: #F4D47C;
-    text-align: center;
 }
-
-/*
-h {
-    position: absolute;
-    width: 669px;
-    height: 524px;
-    left: 65px;
-    top: 147px;
-    font-family: 'Gothic A1';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 75px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.44em;
-    color: #F4D47C;
-}
-
-
-.rectangle {
-    box-sizing: border-box;
-    position: absolute;
-    width: 564px;
-    height: 465px;
-    left: 746px;
-    top: 265px;
-    background: #F4D47C;
-    border: 1px solid #F4D47C;
-    border-radius: 9px;
-}
-
-
-.Name {
-    box-sizing: border-box;
-    position: absolute;
-    width: 490px;
-    height: 41px;
-    left: 780px;
-    top: 302px;
-    background: #F4E2D4;
-    border: 1px solid var(--orange);
-    border-radius: 102px;
-}
-
-
-.Email {
-    box-sizing: border-box;
-    position: absolute;
-    width: 490px;
-    height: 41px;
-    left: 780px;
-    top: 369px;
-    background: #F4E2D4;
-    border: 1px solid #FC8426;
-    border-radius: 102px;
-}
-
-.PNum {
-    box-sizing: border-box;
-    position: absolute;
-    width: 490px;
-    height: 41px;
-    left: 780px;
-    top: 439px;
-    background: #F4E2D4;
-    border: 1px solid #FC8426;
-    border-radius: 102px;
-}
-
-.Mess {
-    box-sizing: border-box;
-    position: absolute;
-    width: 490px;
-    height: 154px;
-    left: 780px;
-    top: 501px;
-    background: #F4E2D4;
-    border: 1px solid #FC8426;
-    border-radius: 21px;
-}
-
-
-button {
-    box-sizing: border-box;
-    position: relative;
-    width: 229px;
-    height: 72px;
-    left: 901px;
-    top: 701px;
-    background: var(--golden);
-    border: 6px solid #FC8426;
-    border-radius: 101px;
-}
-  
-*/
