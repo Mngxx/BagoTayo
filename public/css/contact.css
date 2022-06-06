@@ -1,74 +1,57 @@
-:root {
-    --lightbrown: #F4E2D4;
-    --golden: #F3DC95;
-    --orange: #A04703;
-    --green: #00750E;
-    --white: #FFFF;
-    --black:#212529;
-    --logo_blue: #02BFE8;
-    --logo_red: #EF2341;
-    --logo_orange: #FD8326;
-
-    --font-family1: 'Sora', sans-serif;
-    --font-family2: 'Righteous', cursive;
-
-    --font-size_title_text: 5rem;
-    --font-size_title_p: 2rem;
-    --font-size_header: 2.5rem;
-    --font-size1: 1.24rem;
-    --font-size2: 1.15rem;
-    --font-size3: 1.1rem;
-
-    --font-weight1: 800;
-    --font-weight2: 700;
-    --font-weight3: 600;
-    --font-weight4: 400;
-    --font-weight5: 300;
-    --font-weight6: 100;
-
-
-    --bord-rad_header:5rem;
-
-    --margin-header_lr:9rem;
-    --margin-header_tb:2rem;
-    --margin-body_lr:10rem;
-}
-
-body {
-    background-color: var(--orange);
-}
-
-hr {
-    border-top: 1px solid var(--lightbrown);
-}
-
 .message {
-    margin-top: 78px;
-    font-family: 'Sora';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 35px;
-    align-items: center;
+    font-family: var(--font-family2);
+    font-size: var(--font-size_title_p);
+    font-weight: var(--font-weight2);
+    text-align: left;
     letter-spacing: 0.465em;
     color: #F4D47C;
 }
-
-.container {
-    height: 349px;
-    width: 564px; 
-    background-color: var(--golden);
-    border-radius: 9px;
-    margin-top: 12px;
-    margin-left: 12px;
+.content{
+    height:70vh;
 }
-
+.formcont{
+    background-color:var(--lightbrown);
+    border-radius: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
+    color:var(--black);
+    font-size: var(--font-size3);
+    font-weight: var(--font-weight4);
+}
+.contactcont,.messagecont{
+    display:flex;
+    align-items: center;
+}
+.formsubmit{
+    width:100%;
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+}
+.messagecont{
+    flex-direction: column;
+    justify-content: center;
+}
 .contact {
+/* <<<<<<< HEAD */
     margin-top: 220px;
     margin-left: 12px;
     font-family: 'Sora';
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
-    letter-spacing: 0.465em;
-    color: #F4D47C;
+=======
+}
+.inputfield{
+    border-radius: 1.5rem;
+    border: 0.1rem solid var(--orange);
+}
+@media(max-width:1204px){
+    .content{
+        height: 80vh;
+    }
+    .contact{
+        text-align: center;
+    }
+    .col-6{
+        width:100%;
+    }
 }
