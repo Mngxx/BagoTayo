@@ -6,50 +6,61 @@
     letter-spacing: 0.465em;
     color: var(--golden);
 }
-.content{
-    height:70vh;
+
+.content {
+    height: 70vh;
 }
-.formcont{
-    background-color:var(--lightbrown);
+
+.formcont {
+    background-color: var(--lightbrown);
     border-radius: 1rem;
     padding: 1rem 2rem 2rem 2rem;
-    color:var(--black);
+    color: var(--black);
     font-size: var(--font-size3);
     font-weight: var(--font-weight4);
 }
-.contactcont,.messagecont{
-    display:flex;
+
+.contactcont,
+.messagecont {
+    display: flex;
     align-items: center;
 }
-.formsubmit{
-    width:100%;
-    padding-top:0.5em;
-    padding-bottom:0.5em;
+
+.formsubmit {
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
-.messagecont{
+
+.messagecont {
     flex-direction: column;
     justify-content: center;
 }
+
 .contact {
-/* <<<<<<< HEAD */
+    /* <<<<<<< HEAD */
     font-family: var(--font-family2);
     font-weight: var(--font-weight1);
     font-size: var(--font-size_title_contact);
     letter-spacing: 0.465em;
-    color: #F4D47C;
+    color: var(--golden);
 }
-.inputfield{
+
+.inputfield {
     border-radius: 1.5rem;
     border: 0.1rem solid var(--orange);
 }
-@media(max-width:1204px){
-    .content{
+
+@media(max-width:1204px) {
+    .content {
         height: 80vh;
     }
-    .contact{
+
+    .contact {
         text-align: center;
     }
-    .col-6{
-        width:100%;
+
+    .col-6 {
+        width: 100%;
     }
 }
