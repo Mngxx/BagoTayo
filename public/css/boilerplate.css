@@ -13,6 +13,7 @@
     --font-family2: 'Righteous', cursive;
 
     --font-size_title_text: 5rem;
+    --font-size_title_contact: 3rem;
     --font-size_title_p: 2rem;
     --font-size_header: 2.5rem;
     --font-size1: 1.24rem;
@@ -162,11 +163,11 @@ nav {
     height: 2em;
 }
 
-#navsearch, #formgrid_search{
+#navsearch, #formgrid_search {
     border-radius: 1.5rem 0 0 1.5rem;
 }
 
-#navsearchbtn,#formgrid_searchbtn {
+#navsearchbtn,#formgrid_searchbtn{
     border-radius: 0 1.5rem 1.5rem 0;
     border: 0.1rem solid var(--green);
     color: var(--white);
@@ -283,6 +284,11 @@ nav {
     gap:2rem;
     grid-template-columns: repeat(3,1fr);
 }
+.c-grid2{
+    display:grid;
+    gap:1rem;
+    grid-template-columns: repeat(1,1fr);
+}
 .feat_card{
     border-radius:2rem;
     background-color: var(--lightbrown);
@@ -388,6 +394,14 @@ nav {
 
     .dropdown-menu {
         width: auto;
+    }
+}
+@media(max-width:819px){
+    .header{
+        margin: var(--margin-header_tb) 2rem !important;
+    }
+    .content{
+        margin: 0 3rem;
     }
 }
 @media(max-width:605px){

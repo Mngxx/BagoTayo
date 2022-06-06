@@ -1,30 +1,22 @@
 <% layout('layouts/boilerplate') %>
+<title>FOrum</title>
 <main class="container-fluid">
-
-<body>
-    <hr class = "new1">
     <link rel="stylesheet" href="/css/forum.css">
-    <h1 id="rcorners"> FORUM </h1>
-    <form>
-        <div class="row">
-          <div class="col">
-            <button class="btn categories">Categories</button>
-          </div>
-          <div class="col">
-            <button class="btn posts">All Posts</button>
-          </div>
-        </div>
-    </form>
-    <hr class ="new2">
-    <br><br>
-    <h2> WELCOME! Join the Discussions! </h2>
+    <button class="header px-5" disabled>Forum</button>
+    <section class="content pb-3 mb-5">
+        <!-- <div class="input-group mb-3">
+            <button class="btn btn-outline-secondary forum_rad forum_rad1" name="categ[select]" type="button" autofocus>Categories</button>
+            <button class="btn btn-outline-secondary forum_rad forum_rad2" name="categ[select]" type="button">All Posts</button>
+        </div> -->
+        <hr class ="new2">
+        <br>
+        <h2> WELCOME! Join the Discussions! </h2>
+    </section>
     
-    <br> <br>
-    <section class="content pb-3 mb-5 c-grid">
+    
+
+    <section class="content pb-3 mb-5 c-grid2">
       <div class="card feat_card">
-          <img src="https://cdn.discordapp.com/attachments/971626811756789830/979323743618883634/unknown.png" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
           <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -33,9 +25,6 @@
           </div>
       </div>
       <div class="card feat_card">
-          <img src="https://cdn.discordapp.com/attachments/971626811756789830/979323743618883634/unknown.png" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
           <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -44,9 +33,6 @@
           </div>
       </div>
       <div class="card feat_card">
-          <img src="https://cdn.discordapp.com/attachments/971626811756789830/979323743618883634/unknown.png" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
           <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -55,9 +41,6 @@
           </div>
       </div>
       <div class="card feat_card">
-          <img src="https://cdn.discordapp.com/attachments/971626811756789830/979323743618883634/unknown.png" frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
           <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
@@ -66,7 +49,7 @@
           </div>
       </div>
   </section>
-
-</body>
-</body>   
 </main>
+<script>
+    window.top.document.title = "Forum";
+</script>

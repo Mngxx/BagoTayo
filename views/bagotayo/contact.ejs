@@ -11,45 +11,40 @@
       </head>
 -->
     <link rel="stylesheet" href="/css/contact.css">
-    <hr> 
 
-  <div class = "row">  
-    <div class="col-6"> 
+  <div class = "row content">  
+    <div class="col-6 contactcont"> 
       <h1 class="contact"> Have something to say? Contact Us! </h1> 
     </div>
 
-    <div class="col-6">
-      <p class = "message"> Send us a Message! </p>
-    <div class="container">
+    <div class="col-6 messagecont">
+        <p class = "message mb-4"> Send us a Message! </p>
+      
+    <div class="container-fluid formcont">
         <!-- <form action="/action_page.php">  -->
           <div class="form-group">
             <label for="name"></label>
-            <input type="name" class="form-control" id="name" placeholder="Name" name="name">
+            <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name">
           </div>
           <div class="form-group">
             <label for="email"></label>
-            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+            <input type="email" class="form-control inputfield" id="email" placeholder="Email" name="email">
           </div>
           <div class="form-group">
             <label for="pnun"></label>
-            <input type="pnum" class="form-control" id="pnum" placeholder="Phone Number" name="pnum">
+            <input type="pnum" class="form-control inputfield" id="pnum" placeholder="Phone Number" name="pnum">
           </div>
           <div class="form-group">
             <label for="msg"></label>
-            <input type="message" class="form-control" id="msg" placeholder="Message" name="msg">
+            <textarea class="form-control inputfield" id="msg" name="msg" rows="3" placeholder="Enter message..."></textarea>
           </div>
           <br>
-          <button type="submit" class="btn btn-default">Submit</button>
+          <button type="submit" class="btn feat_btn formsubmit">Submit</button>
         </form>
       </div>
     </div>
-
   </div>
-  
-      
-
-    
-
-    
-
 </main>
+<script>
+  window.top.document.title = "Contact";
+</script>
