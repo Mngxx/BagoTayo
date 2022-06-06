@@ -4,7 +4,7 @@
     font-weight: var(--font-weight2);
     text-align: left;
     letter-spacing: 0.465em;
-    color: #F4D47C;
+    color: var(--golden);
 }
 .content{
     height:70vh;
@@ -32,12 +32,11 @@
 }
 .contact {
 /* <<<<<<< HEAD */
-    margin-top: 220px;
-    margin-left: 12px;
-    font-family: 'Sora';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
+    font-family: var(--font-family2);
+    font-weight: var(--font-weight1);
+    font-size: var(--font-size_title_contact);
+    letter-spacing: 0.465em;
+    color: #F4D47C;
 }
 .inputfield{
     border-radius: 1.5rem;
