@@ -5,7 +5,7 @@
     <main>
         <section class="title">
             <h1 class="title-text">BAGO TAYO</h1>
-            <p class="title-p">"Lorem ipsum dolor sit amet consectetur adipisicing elit."</p>
+            <p class="title-p">"Youth in Innovative Governance."</p>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 1440 200">
                 <path fill-opacity="1"
                     d="M0,224L120,197.3C240,171,480,117,720,85.3C960,53,1200,43,1320,37.3L1440,32L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
@@ -14,52 +14,22 @@
         </section>
         <button class="header px-5" disabled>Featured</button>
         <section class="content pb-3 mb-5 c-grid">
-            <div class="card feat_card">
-                <iframe class="feat_cardcontent" src="https://www.youtube.com/embed/_m1_YT3JJQA" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="card-body">
-                    <h5 class="card-title">Bago Tayo Video Launc </h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn feat_btn">Go to media</a>
+            <% for(let i=0;i<video_data.length;i++){ %>
+                <div class="card feat_card">
+                    <iframe class="feat_cardcontent" src="<%=video_data[i][2]%>" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title"><%=video_data[i][0]%></h5>
+                        <p class="card-text"><%=video_data[i][1]%></p>
+                        </div>
+                        
+                        <a href="<%=video_data[i][3]%>" target="_blank" class="btn feat_btn">Go to media</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card feat_card">
-              <iframe class="feat_cardcontent" src="https://www.youtube.com/embed/Fv6CBEiMDX4" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe> 
-                <div class="card-body">
-                    <h5 class="card-title"> isTOURyahe </h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="https://www.youtube.com/embed/Fv6CBEiMDX4" target="_blank" class="btn feat_btn">Go to media</a>
-                </div>
-            </div>
-            <div class="card feat_card">
-                <iframe class="feat_cardcontent" src="https://www.youtube.com/embed/WC5uu_ZZQBM" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="card-body">
-                    <h5 class="card-title"> Covege-20 Program </h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="https://www.youtube.com/embed/WC5uu_ZZQBM" target="_blank" class="btn feat_btn">Go to media</a>
-                </div>
-            </div>
-            <div class="card feat_card">
-                <iframe class="feat_cardcontent" src="https://www.youtube.com/embed/xBD9uR8cB1s" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <div class="card-body">
-                    <h5 class="card-title"> KKK Disaster Management Orientation and Climate Change Adaptation Program </h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="https://www.youtube.com/embed/xBD9uR8cB1s" target="_blank" class="btn feat_btn">Go to media</a>
-                </div>
-            </div>
+            <% } %>  
         </section>
-
     </main>
     <script>
         window.top.document.title = "Homepage";

@@ -1,3 +1,6 @@
+a{
+    text-decoration: none;
+}
 .dl_btn{
     border-radius: 50%;
     padding:.5rem;
@@ -7,11 +10,30 @@
 .dl_cont{
     display: flex;
     align-items: center;
+    margin-left: 2rem !important;
 }
 .dl_cont > p{
     margin:auto 0;
     font-weight: 700;
 }
 .dl_cont:not(:last-child){
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+.header2{
+    background-color:var(--golden);
+    color:var(--orange);
+    font-weight: var(--font-weight3);
+    font-family: var(--font-family2);
+    border:0;
+    font-size:var(--font-size_title_p);
+    border-radius:1rem 1rem 0 0;
+}
+.parag_temp_cont{
+    border-radius:0 0 1rem 1rem;
+}
+.temp-text{
+    color:var(--orange);
+}
+.temp-text:hover{
+    color:var(--green);
 }

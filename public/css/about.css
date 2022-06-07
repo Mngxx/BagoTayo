@@ -5,3 +5,7 @@
     background-color: var(--green);
     color:var(--white);
 }
+.parag_temp_cont > p{
+    font-size:var(--font-size2);
+    font-weight: 600;
+}

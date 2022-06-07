@@ -25,51 +25,19 @@
             </form>
         </section>
         <section class="content pb-3 mb-5 c-grid">
-
+            <% for(let i=0;i<pub_data.length;i++){ %>
             <div class="card feat_card">
-                <img class="feat_cardcontent" src="https://images.unsplash.com/photo-1550096141-7263640aa48c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" frameborder="0"
+                <img class="feat_cardcontent" src="<%=pub_data[i][0]%>" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></img>
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn feat_btn">Go to media</a>
+                    <h5 class="card-title"><%= pub_data[i][1]%> </h5>
+                    <p class="card-text"><%= pub_data[i][3]%></p>
+                    <p class="card-text"><%= pub_data[i][2]%></p>
+                    <a href="<%=pub_data[i][4]%>" target="_blank" class="btn feat_btn">Go to media</a>
                 </div>
             </div>
-            <div class="card feat_card">
-                <img class="feat_cardcontent" src="https://images.unsplash.com/photo-1550096141-7263640aa48c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></img>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn feat_btn">Go to media</a>
-                </div>
-            </div>
-            <div class="card feat_card">
-                <img class="feat_cardcontent" src="https://images.unsplash.com/photo-1550096141-7263640aa48c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></img>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn feat_btn">Go to media</a>
-                </div>
-            </div>
-            <div class="card feat_card">
-                <img class="feat_cardcontent" src="https://images.unsplash.com/photo-1550096141-7263640aa48c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></img>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="#" class="btn feat_btn">Go to media</a>
-                </div>
-            </div>
+            <% } %> 
         </section>
     </main>
     <script>

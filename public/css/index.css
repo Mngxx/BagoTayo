@@ -1,7 +1,4 @@
-main{
-    font-family:var(--font-family1);
-    font-size:var(--font-size3);
-}
+
 .title {
     position: relative;
     background: var(--golden);

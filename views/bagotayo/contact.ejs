@@ -1,5 +1,5 @@
 <% layout('layouts/boilerplate') %>
-<main class="container-fluid">
+<main>
  <!-- 
     <head>
         <title>Contact</title>
@@ -11,7 +11,6 @@
       </head>
 -->
     <link rel="stylesheet" href="/css/contact.css">
-
   <div class = "row content">  
     <div class="col-6 contactcont"> 
       <h1 class="contact"> Have something to say? Contact Us! </h1> 
@@ -21,22 +20,34 @@
         <p class = "message mb-4"> Send us a Message! </p>
       
     <div class="container-fluid formcont">
-        <!-- <form action="/action_page.php">  -->
+        <form action="/contact" method="POST" novalidate class="validated-form"> 
           <div class="form-group">
             <label for="name"></label>
-            <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name">
+            <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name" required>
+            <div class="valid-feedback">
+              Looks good
+          </div>
           </div>
           <div class="form-group">
             <label for="email"></label>
-            <input type="email" class="form-control inputfield" id="email" placeholder="Email" name="email">
+            <input type="email" class="form-control inputfield" id="email" placeholder="Email" name="email" required>
+            <div class="valid-feedback">
+              Looks good
+            </div>
           </div>
           <div class="form-group">
             <label for="pnun"></label>
-            <input type="pnum" class="form-control inputfield" id="pnum" placeholder="Phone Number" name="pnum">
+            <input type="pnum" class="form-control inputfield" id="pnum" placeholder="Phone Number" name="pnum" required>
+            <div class="valid-feedback">
+              Looks good
+            </div>
           </div>
           <div class="form-group">
             <label for="msg"></label>
-            <textarea class="form-control inputfield" id="msg" name="msg" rows="3" placeholder="Enter message..."></textarea>
+            <textarea class="form-control inputfield" id="msg" name="msg" rows="3" placeholder="Enter message..." required></textarea>
+            <div class="valid-feedback">
+              Looks good
+            </div>
           </div>
           <br>
           <button type="submit" class="btn feat_btn formsubmit">Submit</button>
