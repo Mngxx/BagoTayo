@@ -1,6 +1,4 @@
-a{
-    text-decoration: none;
-}
+
 .dl_btn{
     border-radius: 50%;
     padding:.5rem;
@@ -30,10 +28,4 @@ a{
 }
 .parag_temp_cont{
     border-radius:0 0 1rem 1rem;
-}
-.temp-text{
-    color:var(--orange);
-}
-.temp-text:hover{
-    color:var(--green);
 }

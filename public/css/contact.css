@@ -38,15 +38,6 @@
     justify-content: center;
 }
 
-.contact {
-    /* <<<<<<< HEAD */
-    font-family: var(--font-family2);
-    font-weight: var(--font-weight1);
-    font-size: var(--font-size_title_contact);
-    letter-spacing: 0.465em;
-    color: var(--golden);
-}
-
 .inputfield {
     border-radius: 1.5rem;
     border: 0.1rem solid var(--orange);

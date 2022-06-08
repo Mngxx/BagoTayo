@@ -27,13 +27,13 @@
         <section class="content pb-3 mb-5 c-grid">
             <% for(let i=0;i<pub_data.length;i++){ %>
             <div class="card feat_card">
-                <img class="feat_cardcontent" src="<%=pub_data[i][0]%>" frameborder="0"
+                <img class="feat_cardcontent" src="<%=pub_data[i][3]%>" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></img>
                 <div class="card-body">
-                    <h5 class="card-title"><%= pub_data[i][1]%> </h5>
-                    <p class="card-text"><%= pub_data[i][3]%></p>
+                    <h5 class="card-title"><%= pub_data[i][0]%> </h5>
                     <p class="card-text"><%= pub_data[i][2]%></p>
+                    <p class="card-text"><%= pub_data[i][1]%></p>
                     <a href="<%=pub_data[i][4]%>" target="_blank" class="btn feat_btn">Go to media</a>
                 </div>
             </div>

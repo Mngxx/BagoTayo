@@ -1,6 +1,5 @@
 <% layout('layouts/boilerplate') %>
     <link rel="stylesheet" href="/css/index.css">
-    <title>HomePage</title>
 
     <main>
         <section class="title">
@@ -14,18 +13,26 @@
         </section>
         <button class="header px-5" disabled>Featured</button>
         <section class="content pb-3 mb-5 c-grid">
-            <% for(let i=0;i<video_data.length;i++){ %>
+            <% for(let i = 0; i<numarr; i++){%>
                 <div class="card feat_card">
-                    <iframe class="feat_cardcontent" src="<%=video_data[i][2]%>" frameborder="0"
+                    <% if(arr[i][5] == "Videos"){  %> 
+                    <iframe class="feat_cardcontent" src="<%=arr[i][3]%>" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
+                    <% } %>
+                    <% if(arr[i][5] == "Publications"){  %> 
+                        <img class="feat_cardcontent" src="<%=arr[i][3]%>" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></img>
+                    <% } %>
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div>
-                            <h5 class="card-title"><%=video_data[i][0]%></h5>
-                        <p class="card-text"><%=video_data[i][1]%></p>
+                            <h5 class="card-title"><%=arr[i][2]%></h5>
+                            <p class="card-text"><%=arr[i][0]%></p>
+                            <p class="card-text"><%=arr[i][1]%></p>
                         </div>
                         
-                        <a href="<%=video_data[i][3]%>" target="_blank" class="btn feat_btn">Go to media</a>
+                        <a href="<%=arr[i][4]%>" target="_blank" class="btn feat_btn">Go to media</a>
                     </div>
                 </div>
             <% } %>  

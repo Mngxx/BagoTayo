@@ -1,0 +1,63 @@
+<% layout('layouts/boilerplate') %>
+<main>
+    <h1 class="contact text-center mx-3 pb-3 mb-5 mt-5">Search results for:<%=query%> </h1> 
+    <section class="content pb-3 mb-5 c-grid">
+        <% for(let [key,value] of Object.entries(data_q)){ %> 
+            <% if(query === ""){ break;} %> 
+            <% for(let v of value){ %> 
+                <% if(v[0].toLowerCase().includes(query.toLowerCase()) || v[1].toLowerCase().includes(query.toLowerCase()) ||v[2].toLowerCase().includes(query.toLowerCase()) ){ %> 
+                    <div class="card feat_card">
+                            <%if(key == "Templates"){%> 
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h5 class="card-title"><%=v[0]%></h5>
+                                        <p class="card-text"><a class="temp-text" href="<%=v[3]%>" target="_blank"><%=v[1]%></a></p>
+                                    </div>
+                                    <a href="/resources/templates" target="_blank" class="btn feat_btn">Go to <%=key%></a>
+                                </div>
+                            <%}%>
+                            <%if(key == "Videos"){%> 
+                                <iframe class="feat_cardcontent" src="<%=v[3]%>" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h5 class="card-title"><a class="temp-text" href="<%=v[4]%>" target="_blank"><%=v[0]%></a></h5>
+                                        <p class="card-text"><%=v[2]%></p>
+                                        <p class="card-text"><a class="temp-text" href="<%=v[4]%>" target="_blank"><%=v[1]%></a></p>
+                                    </div>
+                                    <a href="/resources/videos" target="_blank" class="btn feat_btn">Go to <%=key%></a>
+                                </div>
+                            <%}%>
+                            <%if(key == "Publications"){%> 
+                                <img class="feat_cardcontent" src="<%=v[3]%>" frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></img>
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h5 class="card-title"><a class="temp-text" href="<%=v[4]%>" target="_blank"><%=v[0]%></a></h5>
+                                        <p class="card-text"><%=v[2]%></p>
+                                        <p class="card-text"><a class="temp-text" href="<%=v[4]%>" target="_blank"><%=v[1]%></a></p>
+                                    </div>
+                                    <a href="/resources/publications" target="_blank" class="btn feat_btn">Go to <%=key%></a>
+                                </div>
+                            <%}%>
+                            <%if(key == "Other Materials"){%> 
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div>
+                                        <h5 class="card-title"><a class="temp-text" href="<%=v[3]%>" target="_blank"><%=v[0]%> </a></h5>
+                                        <p class="card-text"><%=v[2]%></p>
+                                        <p class="card-text"><a class="temp-text" href="<%=v[3]%>" target="_blank"><%=v[1]%> </a></p>
+                                    </div>
+                                    <a href="/resources/othermaterials" target="_blank" class="btn feat_btn">Go to <%=key%> </a>
+                                </div>
+                            <%}%>  
+                        
+                    </div>
+                <% } %> 
+            <% } %> 
+        <% } %> 
+        
+    </section>
+</main>
