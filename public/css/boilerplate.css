@@ -19,6 +19,7 @@
     --font-size1: 1.24rem;
     --font-size2: 1.15rem;
     --font-size3: 1.1rem;
+    --font-size4: 1rem;
 
     --font-weight1: 800;
     --font-weight2: 700;
@@ -26,7 +27,6 @@
     --font-weight4: 400;
     --font-weight5: 300;
     --font-weight6: 100;
-
 
     --bord-rad_header:5rem;
 
@@ -88,11 +88,12 @@ body,
 nav {
     padding: 1.5rem 3rem !important;
     height: 4.5rem;
-    border-bottom: 0.3rem solid var(--orange);
+    border-bottom: 0.2rem solid var(--orange);
 }
 main{
     font-family:var(--font-family1);
     font-size:var(--font-size3);
+    margin-top: 4.5rem;
 }
 a{
     text-decoration: none;
@@ -102,6 +103,11 @@ a{
     font-family: var(--font-family1);
     font-size: var(--font-size1);
     font-weight: var(--font-weight1);
+}
+.nav_submitrsc,#navsearch{
+    font-family: var(--font-family1);
+    font-size: var(--font-size4) !important;
+    font-weight: var(--font-weight4);
 }
 
 .navbar-brand {
@@ -115,7 +121,7 @@ a{
     justify-content: space-between;
     padding-inline-start: 0 !important;
     align-items: center;
-    width: 40%;
+    width: 35%;
 }
 
 .navlist {
@@ -130,7 +136,7 @@ a{
 .nav_submitrsc{
     max-height:2.5em;
     min-width:11.5rem;
-    width:100% !important;
+    width:70% !important;
 }
 
 /*DROPDOWN MENU*/
@@ -438,6 +444,9 @@ a{
 
     .dropdown-menu {
         width: auto;
+    }
+    .nav_submitrsc{
+        width:100%;
     }
 }
 @media(max-width:819px){

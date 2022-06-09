@@ -1,54 +1,84 @@
 <% layout('layouts/boilerplate') %>
-<main>
-    <link rel="stylesheet" href="/css/submitresource.css">
-    <button class="header px-5" disabled>Forum</button>
-    <section class="content pb-3 mb-5">
-        <!-- <div class="input-group mb-3">
-            <button class="btn btn-outline-secondary forum_rad forum_rad1" name="categ[select]" type="button" autofocus>Categories</button>
-            <button class="btn btn-outline-secondary forum_rad forum_rad2" name="categ[select]" type="button">All Posts</button>
-        </div> -->
-        <hr class ="new2">
-        <br>
-        <h2> WELCOME! Join the Discussions! </h2>
-    </section>
-    
-    
+    <main>
+        <link rel="stylesheet" href="/css/contact.css">
 
-    <section class="content pb-3 mb-5 c-grid2">
-      <div class="card feat_card">
-          <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-              <a href="#" class="btn feat_btn btn_lrg">Go to media</a>
-          </div>
-      </div>
-      <div class="card feat_card">
-          <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-              <a href="hhttps://cdn.discordapp.com/attachments/971626811756789830/979323743618883634/unknown.png" target="_blank" class="btn feat_btn btn_lrg">Go to media</a>
-          </div>
-      </div>
-      <div class="card feat_card">
-          <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-              <a href="hhttps://cdn.discordapp.com/attachments/971626811756789830/979323743618883634/unknown.png" target="_blank" class="btn feat_btn btn_lrg">Go to media</a>
-          </div>
-      </div>
-      <div class="card feat_card">
-          <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                  card's content.</p>
-              <a href="https://cdn.discordapp.com/attachments/971626811756789830/979323743618883634/unknown.png" target="_blank" class="btn feat_btn btn_lrg">Go to media</a>
-          </div>
-      </div>
-  </section>
-</main>
-<script>
-    window.top.document.title = "Submit a Resource";
-</script>
+        <section class="content pb-3 mb-5">
+            <h2 class="contact mb-0">Submit A Resource</h2>
+            <p class="message mt-4">We aim to promote open innovation! <br> Send in your contribution.</p>
+            <div class="formcont resrcform mt-4">
+                <form action="/submitresource" method="POST" novalidate class="validated-form"> 
+                  <div class="form-group">
+                    <label for="name"></label>
+                    <input type="name" class="form-control inputfield" id="name" placeholder="Name" name="name" required>
+                    <div class="valid-feedback">
+                      Looks good
+                  </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email"></label>
+                    <input type="email" class="form-control inputfield" id="email" placeholder="Email" name="email" required>
+                    <div class="valid-feedback">
+                      Looks good
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="pnun"></label>
+                    <input type="pnum" class="form-control inputfield" id="pnum" placeholder="Phone Number" name="num">
+                  </div>
+                  <div class="form-group">
+                    <label for="org"></label>
+                    <input type="org" class="form-control inputfield" id="org" placeholder="Organization/Local Government" name="org" required>
+                    <div class="valid-feedback">
+                      Looks good
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="categ"></label>
+                    <select class="form-select inputfield" id="categ" name="categ" aria-label=".form-select-lg example"required>
+                        <option value="" selected disabled>Category</option>
+                        <option value="National Issuances">National Issuances</option>
+                        <option value="Legal Templates">Legal Templates</option>
+                        <option value="Vulnerable Groups">Vulnerable Groups</option>
+                        <option value="Vulnerable Groups">Vulnerable Groups</option>
+                        <option value="Medical Facilities">Medical Facilities</option>
+                        <option value="Resources/Fund Utilization">Resources/Fund Utilization</option>
+                        <option value="Support for Frontliners">Support for Frontliners</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Community Response">Community Response</option>
+                        <option value="Relief and Assistance">Relief and Assistance</option>
+                        <option value="Peace and Order">Peace and Order</option>
+                        <option value="IEC Materials">IEC Materials</option>
+                        <option value="LGU COVID-19 Plans">LGU COVID-19 Plans</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    <div class="valid-feedback">
+                      Looks good
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="title"></label>
+                    <input type="title" class="form-control inputfield" id="title" placeholder="Title" name="title" required>
+                    <div class="valid-feedback">
+                      Looks good
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="desc"></label>
+                    <textarea class="form-control inputfield" id="desc" name="desc" rows="4" placeholder="Description" required></textarea>
+                    <div class="valid-feedback">
+                      Looks good
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="link"></label>
+                    <textarea class="form-control inputfield" id="link" name="link" rows="4" placeholder="Link to photos/other references (optional but highly recommended)"></textarea>
+                  </div>
+                  <br>
+                  <button type="submit" class="btn feat_btn formsubmit">Submit</button>
+                </form>
+              </div>
+        </section>
+    </main>
+    <script>
+        window.top.document.title = "Submit a Resource";
+    </script>

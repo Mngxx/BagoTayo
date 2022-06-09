@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path')
 const ejsMate = require('ejs-mate')
 const Joi = require('joi');
-const { contactSchema } = require('./joi_schemas')
 const methodOverride = require('method-override');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError = require('./utils/ExpressError');
@@ -39,16 +38,6 @@ async function getData(sheet) {
     return Rowdata;
 }
 
-const validateContact = (req, res, next) => {
-    const { error } = contactSchema.validate(req.body);
-    if (error) {
-        const msg = error.details.map(el => el.message).join(',');
-        throw new ExpressError(msg, 400);
-    } else {
-        next();
-    }
-}
-
 app.get('/', catchAsync(async (req, res, next) => {
     const client = await auth.getClient();
     const googleSheets = google.sheets({ version: "v4", auth: client });
@@ -79,7 +68,7 @@ app.get('/contact', (req, res, next) => {
     nav_hl = "contact";
     res.render('bagotayo/contact', { nav_hl });
 })
-app.post('/contact', validateContact, catchAsync(async (req, res, next) => {
+app.post('/contact', catchAsync(async (req, res, next) => {
     nav_hl = "";
     const { name, email, pnum, msg } = req.body
     const client = await auth.getClient();
@@ -97,7 +86,7 @@ app.post('/contact', validateContact, catchAsync(async (req, res, next) => {
             values: [[dateTime, name, email, pnum, msg]],
         },
     });
-    res.render('bagotayo/contactsubmitted', { nav_hl });
+    res.render('bagotayo/formsubmitted', { nav_hl });
 }))
 app.get('/search', catchAsync(async (req, res, next) => {
     const client = await auth.getClient();
@@ -123,9 +112,29 @@ app.get('/search', catchAsync(async (req, res, next) => {
     res.render('bagotayo/search', { nav_hl, query, data_q })
 }))
 app.get('/submitresource', (req, res, next) => {
-    nav_hl = "forum";
+    nav_hl = " ";
     res.render('bagotayo/submitresource', { nav_hl });
 })
+app.post('/submitresource',catchAsync(async(req,res,next)=>{
+    nav_hl = " ";
+    const { name, email, num, org, categ, title, desc, link} = req.body;
+    var today = new Date();
+    var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date + ' ' + time;
+    const client = await auth.getClient();
+    const googleSheets = google.sheets({ version: "v4", auth: client });
+    await googleSheets.spreadsheets.values.append({
+        auth,
+        spreadsheetId,
+        range: "Submission of Resources",
+        valueInputOption: "USER_ENTERED",
+        resource: {
+            values: [[dateTime, name, email, num, org,categ,title,desc,link]],
+        },
+    });
+    res.render('bagotayo/formsubmitted', { nav_hl });
+}))
 app.get('/about', (req, res, next) => {
     nav_hl = "about";
     res.render('bagotayo/about', { nav_hl });

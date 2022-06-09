@@ -3,15 +3,19 @@
     font-family: var(--font-family2);
     font-size: var(--font-size_title_p);
     font-weight: var(--font-weight2);
-    text-align: left;
     letter-spacing: 0.465em;
     color: var(--golden);
 }
-
-.content {
-    height: 70vh;
+.content{
+    margin-top:3.5rem;
+    margin-bottom:3.5rem;
 }
-
+.contact{
+    margin-bottom:2rem;
+}
+.maincontact{
+    align-items: center;
+}
 .formcont {
     background-color: var(--lightbrown);
     border-radius: 1rem;
@@ -21,38 +25,32 @@
     font-weight: var(--font-weight4);
 }
 
-.contactcont,
-.messagecont {
-    display: flex;
-    align-items: center;
-}
-
 .formsubmit {
     width: 100%;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
 }
 
-.messagecont {
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 .inputfield {
     border-radius: 1.5rem;
     border: 0.1rem solid var(--orange);
 }
+.resrcform{
+    width:70%;
+}
 
 @media(max-width:1204px) {
-    .content {
-        height: 80vh;
+    .maincontact{
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+    .contact{
+        width:100%;
+    }
+    .col-6{
+        width:100%;
     }
 
-    .contact {
-        text-align: center;
-    }
-
-    .col-6 {
-        width: 100%;
-    }
 }
