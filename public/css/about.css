@@ -2,7 +2,45 @@
     font-size:var(--font-size2);
     font-weight: 600;
     margin-left: 2rem !important;
+    text-align: justify;
 }
+
 .parag_temp_cont{
     border-radius:0 0 1rem 1rem;
+}
+
+.pydn {
+    background-image: url("/img/pydn.png");
+    background-size: 35em 39em;
+}
+
+.siklab {
+    background-image: url("/img/siklab.png");
+    background-size: 35em 19em;
+}
+
+.sugpat {
+    background-image: url("/img/sugpat.jpg");
+    background-size: 300px 100px;
+}
+
+.ypeer {
+    background-image: url("/img/ypeer.png");
+    background-size: 300px 100px;
+}
+
+.ymh {
+    background-image: url("/img/ymh.png");
+    background-size: 300px 100px;
+}
+
+.galingpook {
+    background-image: ur("/img/galingpook.jpg");
+    background-size: 300px 100px;
+}
+
+.col-6 {
+    height:50 rem;
+    background-repeat: no-repeat;
+    text-align: justify;
 }
