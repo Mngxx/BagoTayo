@@ -1,6 +1,4 @@
 .parag_temp_cont > p{
-    font-size:var(--font-size2);
-    font-weight: 600;
     margin-left: 2rem !important;
     text-align: justify;
 }
@@ -16,7 +14,7 @@
 
 .siklab {
     background-image: url("/img/siklab.png");
-    background-size: 1em 9em; 
+    /* background-size: 1em 9em;  */
 }
 
 .sugpat {
@@ -43,5 +41,17 @@
     /* height:100 rem; */
     background-repeat: no-repeat;
     text-align: justify;
-    background-size: 100% 100%;
+    background-size: contain;
+    background-position: center;
+}
+.bold{
+    font-weight: 600;
+}
+.title{
+    font-size:var(--font-size1);
+}
+@media(max-width:1096px){
+    .col-6{
+        width:100% !important;
+    }
 }
