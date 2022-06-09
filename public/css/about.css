@@ -11,36 +11,37 @@
 
 .pydn {
     background-image: url("/img/pydn.png");
-    background-size: 35em 39em;
+    /* background-size: 35em 39em; */
 }
 
 .siklab {
     background-image: url("/img/siklab.png");
-    background-size: 35em 19em;
+    background-size: 1em 9em; 
 }
 
 .sugpat {
-    background-image: url("/img/sugpat.jpg");
-    background-size: 300px 100px;
+    background-image: url("/img/sugpat.png");
+    /* background-size: 35em 35em; */
 }
 
 .ypeer {
     background-image: url("/img/ypeer.png");
-    background-size: 300px 100px;
+    /* background-size: 30em 20em; */
 }
 
 .ymh {
-    background-image: url("/img/ymh.png");
-    background-size: 300px 100px;
+    background-image: url("/img/y4mh.png");
+    /*background-size: 35em 39em;*/
 }
 
 .galingpook {
-    background-image: ur("/img/galingpook.jpg");
-    background-size: 300px 100px;
+    background-image: url("/img/galingpook.png");
+    /*background-size: 25em 19em;*/
 }
 
 .col-6 {
-    height:50 rem;
+    /* height:100 rem; */
     background-repeat: no-repeat;
     text-align: justify;
+    background-size: 100% 100%;
 }
