@@ -17,15 +17,6 @@
 .dl_cont:not(:last-child){
     margin-bottom: 1.5rem !important;
 }
-.header2{
-    background-color:var(--golden);
-    color:var(--orange);
-    font-weight: var(--font-weight3);
-    font-family: var(--font-family2);
-    border:0;
-    font-size:var(--font-size_title_p);
-    border-radius:1rem 1rem 0 0;
-}
 .parag_temp_cont{
     border-radius:0 0 1rem 1rem;
 }

@@ -88,6 +88,7 @@ body,
 nav {
     padding: 1.5rem 3rem !important;
     height: 4.5rem;
+    border-bottom: 0.3rem solid var(--orange);
 }
 main{
     font-family:var(--font-family1);
@@ -114,7 +115,7 @@ a{
     justify-content: space-between;
     padding-inline-start: 0 !important;
     align-items: center;
-    width: 50%;
+    width: 40%;
 }
 
 .navlist {
@@ -125,6 +126,11 @@ a{
     width: 100%;
     color: var(--golden) !important;
     border-radius: 0.4rem 0.4rem 0 0;
+}
+.nav_submitrsc{
+    max-height:2.5em;
+    min-width:11.5rem;
+    width:100% !important;
 }
 
 /*DROPDOWN MENU*/
@@ -180,7 +186,7 @@ a{
 }
 
 #searchform {
-    width: 30%;
+    width: 40%;
     margin-left: 2rem;
 }
 
@@ -230,6 +236,15 @@ a{
     font-size:var(--font-size_header);
     border-radius:var(--bord-rad_header);
 }
+.header2{
+    background-color:var(--golden);
+    color:var(--orange);
+    font-weight: var(--font-weight3);
+    font-family: var(--font-family2);
+    border:0;
+    font-size:var(--font-size_title_p);
+    border-radius:1rem 1rem 0 0;
+}
 .content{
     margin: 0 var(--margin-body_lr);
 }
@@ -241,6 +256,7 @@ a{
     font-size: var(--font-size3);
     font-weight: var(--font-weight4);
 }
+
 
     /*index, resources/videos, resources/publications*/
 .dropdown_select1{
@@ -428,6 +444,7 @@ a{
     .header{
         margin: var(--margin-header_tb) 2rem !important;
     }
+
     .content{
         margin: 0 3rem;
     }

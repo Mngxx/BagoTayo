@@ -1,11 +1,8 @@
-.contactbtn{
-    float: right;
-    border-radius: 100%;
-    padding:1rem;
-    background-color: var(--green);
-    color:var(--white);
-}
 .parag_temp_cont > p{
     font-size:var(--font-size2);
     font-weight: 600;
+    margin-left: 2rem !important;
+}
+.parag_temp_cont{
+    border-radius:0 0 1rem 1rem;
 }

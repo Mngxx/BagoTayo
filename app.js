@@ -67,12 +67,6 @@ app.get('/', catchAsync(async (req, res, next) => {
         p.push("Publications")
     }
     var arr = vids.concat(pubs)
-    var swap;
-    for(let x of arr){
-        swap = x[0];
-        x[0] = x[2]
-        x[2] = swap;
-    }
     arr.sort().reverse();
     var numarr = 6;
     if(arr.length < 6){
@@ -113,10 +107,10 @@ app.get('/search', catchAsync(async (req, res, next) => {
         spreadsheetId,
         ranges: ["Templates", "Videos", "Publications", "Other Materials"],
     });
-    var temps = get_temps.data.valueRanges[0].values;
-    var vids = get_temps.data.valueRanges[1].values;
-    var pubs = get_temps.data.valueRanges[2].values;
-    var others = get_temps.data.valueRanges[3].values;
+    var temps = get_temps.data.valueRanges[0].values.sort().reverse();
+    var vids = get_temps.data.valueRanges[1].values.sort().reverse();
+    var pubs = get_temps.data.valueRanges[2].values.sort().reverse();
+    var others = get_temps.data.valueRanges[3].values.sort().reverse();
     temps.splice(0, 1); vids.splice(0, 1); pubs.splice(0, 1); others.splice(0, 1);
     var data_q = {
         "Templates": temps,
@@ -128,9 +122,9 @@ app.get('/search', catchAsync(async (req, res, next) => {
     var query = req.query.q;
     res.render('bagotayo/search', { nav_hl, query, data_q })
 }))
-app.get('/forum', (req, res, next) => {
+app.get('/submitresource', (req, res, next) => {
     nav_hl = "forum";
-    res.render('bagotayo/forum', { nav_hl });
+    res.render('bagotayo/submitresource', { nav_hl });
 })
 app.get('/about', (req, res, next) => {
     nav_hl = "about";
@@ -141,11 +135,11 @@ app.get('/resources/templates', catchAsync(async (req, res, next) => {
     var temps_data = await getData("Templates");
     var dict_temps = {}
     for (let i = 0; i < temps_data.length; i++) {
-        if (temps_data[i][0] in dict_temps) {
-            dict_temps[temps_data[i][0]].push([temps_data[i][1], temps_data[i][3]]);
+        if (temps_data[i][1] in dict_temps) {
+            dict_temps[temps_data[i][1]].push([temps_data[i][2], temps_data[i][3]]);
         }
         else {
-            dict_temps[temps_data[i][0]] = [[temps_data[i][1], temps_data[i][3]]];
+            dict_temps[temps_data[i][1]] = [[temps_data[i][2], temps_data[i][3]]];
         }
     }
     res.render('bagotayo/res_templates', { nav_hl, dict_temps });
@@ -153,16 +147,19 @@ app.get('/resources/templates', catchAsync(async (req, res, next) => {
 app.get('/resources/videos', catchAsync(async (req, res, next) => {
     nav_hl = "resources";
     var video_data = await getData("Videos");
+    video_data.sort().reverse();
     res.render('bagotayo/res_videos', { nav_hl, video_data });
 }))
 app.get('/resources/publications', catchAsync(async (req, res, next) => {
     nav_hl = "resources";
     var pub_data = await getData("Publications");
+    pub_data.sort().reverse();
     res.render('bagotayo/res_pub', { nav_hl, pub_data });
 }))
 app.get('/resources/othermaterials', catchAsync(async (req, res, next) => {
     nav_hl = "resources";
     var oth_data = await getData("Other Materials");
+    oth_data.sort().reverse();
     res.render('bagotayo/res_others', { nav_hl, oth_data });
 }))
 app.all('*', (req, res, next) => {

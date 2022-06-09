@@ -35,52 +35,6 @@
     text-align: center;
   }
 
-h1 {
-    display: block;
-    font-size: 2rem;
-    color: var(--orange);
-    margin-top: 0.75em;
-    margin-bottom: 1.75em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-  }
-
-.bttn {
-    border: none;
-    background-color: inherit;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.btn:hover {
-    background-color: var(--green);
-    border-radius: 9px;
-}
-
-.categories {
-    margin-left: 234px ;
-    font-family: 'Sora';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    letter-spacing: 0.465em;
-    color: var(--golden);
-    text-align: center;
-}
-
-.posts {
-    margin-left: -190px;
-    font-family: 'Sora';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    letter-spacing: 0.465em;
-    color: var(--golden);
-}
-
 h2 {
     font-family: 'Sora';
     width: 70%;
