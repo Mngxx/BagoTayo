@@ -1,9 +1,9 @@
 <% layout('layouts/boilerplate') %>
     <link rel="stylesheet" href="/css/res_templates.css">
     <main>
-        <button class="header px-5" disabled>Templates</button>
+        <button class="header px-5" disabled data-aos="zoom-in">Templates</button>
         <% for(let [key,value] of Object.entries(dict_temps)){ %>
-            <section class="content pb-3 mb-5">
+            <section class="content pb-3 mb-5" data-aos="fade-left">
                 <button class="header2 px-5 py-2" disabled><%=key%></button> 
                 <article class="parag_temp_cont">
                     <% for(let v of value){ %> 

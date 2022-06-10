@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate') %>
     <main>
-        <button class="header px-5" disabled>Publications</button>
-        <section class="content mb-5 inputcontent search_sort-grid">
+        <button class="header px-5" disabled data-aos="zoom-in">Publications</button>
+        <!-- <section class="content mb-5 inputcontent search_sort-grid">
             <select class="form-select dropdown_select1 formgrid_form" aria-label="Default select example">
                 <option selected hidden>Sort: <span class="formgrid_formhighlight"> ALL TOPICS</span></option>
                 <option value="topic1">Topic 1</option>
@@ -23,8 +23,8 @@
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                     </svg></button>
             </form>
-        </section>
-        <section class="content pb-3 mb-5 c-grid">
+        </section> -->
+        <section class="content pb-3 mb-5 c-grid" data-aos="fade-left">
             <% for(let i=0;i<pub_data.length;i++){ %>
             <div class="card feat_card">
                 <img class="feat_cardcontent" src="<%=pub_data[i][3]%>" frameborder="0"
