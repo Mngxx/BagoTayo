@@ -220,13 +220,13 @@ a{
         justify-content: space-between;
         align-items: center;
     }
-    footer .bi:nth-child(1){
-        color:var(--logo_blue);
+    footer a .bi-facebook{
+        color:var(--logo_blue)!important;
     }
-    footer .bi:nth-child(2){
-        color:var(--logo_red);
+    footer a .bi-envelope-fill{
+        color:var(--logo_red) !important;
     }
-    footer .bi:nth-child(3){
+    footer a .bi-youtube{
         color:var(--logo_orange);
     }
 /*FOOTER end*/

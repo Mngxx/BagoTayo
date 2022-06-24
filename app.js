@@ -1,17 +1,22 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
 const express = require('express');
 const path = require('path')
 const ejsMate = require('ejs-mate')
-const Joi = require('joi');
 const methodOverride = require('method-override');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError = require('./utils/ExpressError');
-
+const helmet = require('helmet')
 const { google } = require("googleapis");
-const spreadsheetId = "1iJGfuIR6TjAD74CbqdgBcd2RPqMw02b0zitzj_JbOXY";
+const spreadsheetId = process.env.SPREADSHEET_ID;
+
+
 const auth = new google.auth.GoogleAuth({
     keyFile: "credentials.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
 });
+
 
 
 
@@ -24,6 +29,55 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
+
+const scriptSrcUrls = [
+    "https://stackpath.bootstrapcdn.com/",
+    "https://api.tiles.mapbox.com/",
+    "https://api.mapbox.com/",
+    "https://kit.fontawesome.com/",
+    "https://cdnjs.cloudflare.com/",
+    "https://cdn.jsdelivr.net/",
+    "https://unpkg.com",
+];
+const styleSrcUrls = [
+    "https://kit-free.fontawesome.com/",
+    "https://stackpath.bootstrapcdn.com/",
+    "https://api.mapbox.com/",
+    "https://api.tiles.mapbox.com/",
+    "https://fonts.googleapis.com/",
+    "https://use.fontawesome.com/",
+    "https://cdn.jsdelivr.net/",
+    "https://unpkg.com",
+];
+const connectSrcUrls = [
+    "https://*.tiles.mapbox.com",
+    "https://api.mapbox.com",
+    "https://events.mapbox.com",
+    "https://www.youtube.com",
+];
+
+app.use(
+    helmet.contentSecurityPolicy({
+        directives: {
+            defaultSrc: [],
+            connectSrc: ["'self'", ...connectSrcUrls],
+            scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
+            styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
+            workerSrc: ["'self'", "blob:"],
+            objectSrc: [],
+            imgSrc: [
+                "'self'",
+                "blob:",
+                "data:",
+                `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/`, //SHOULD MATCH YOUR CLOUDINARY ACCOUNT!
+                "https://images.unsplash.com/"
+            ],
+            frameSrc: ["https://www.youtube.com/"],
+            mediaSrc: ['https://youtu.be/', 'https://www.youtube.com/embed/', 'https://www.youtube.com/'],
+            childSrc: ["blob:"]
+        }
+    })
+);
 
 async function getData(sheet) {
     const client = await auth.getClient();
@@ -44,25 +98,25 @@ app.get('/', catchAsync(async (req, res, next) => {
     var get_temps = await googleSheets.spreadsheets.values.batchGet({
         auth,
         spreadsheetId,
-        ranges: ["Videos","Publications"],
+        ranges: ["Videos", "Publications"],
     });
     var vids = get_temps.data.valueRanges[0].values;
     var pubs = get_temps.data.valueRanges[1].values;
     vids.splice(0, 1); pubs.splice(0, 1);
-    for(let v of vids){
+    for (let v of vids) {
         v.push("Videos")
     }
-    for(let p of pubs){
+    for (let p of pubs) {
         p.push("Publications")
     }
     var arr = vids.concat(pubs)
     arr.sort().reverse();
     var numarr = 6;
-    if(arr.length < 6){
+    if (arr.length < 6) {
         numarr = arr.length
     }
     nav_hl = "home";
-    res.render('bagotayo/index', { nav_hl, arr, numarr});
+    res.render('bagotayo/index', { nav_hl, arr, numarr });
 }))
 app.get('/contact', (req, res, next) => {
     nav_hl = "contact";
@@ -115,9 +169,9 @@ app.get('/submitresource', (req, res, next) => {
     nav_hl = " ";
     res.render('bagotayo/submitresource', { nav_hl });
 })
-app.post('/submitresource',catchAsync(async(req,res,next)=>{
+app.post('/submitresource', catchAsync(async (req, res, next) => {
     nav_hl = " ";
-    const { name, email, num, org, categ, title, desc, link} = req.body;
+    const { name, email, num, org, categ, title, desc, link } = req.body;
     var today = new Date();
     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -130,7 +184,7 @@ app.post('/submitresource',catchAsync(async(req,res,next)=>{
         range: "Submission of Resources",
         valueInputOption: "USER_ENTERED",
         resource: {
-            values: [[dateTime, name, email, num, org,categ,title,desc,link]],
+            values: [[dateTime, name, email, num, org, categ, title, desc, link]],
         },
     });
     res.render('bagotayo/formsubmitted', { nav_hl });
