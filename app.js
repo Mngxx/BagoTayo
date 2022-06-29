@@ -137,7 +137,7 @@ app.post('/contact', catchAsync(async (req, res, next) => {
         range: "Contact",
         valueInputOption: "USER_ENTERED",
         resource: {
-            values: [[dateTime, name, email, pnum, msg]],
+            values: [["Unread",dateTime, name, email, pnum, msg]],
         },
     });
     res.render('bagotayo/formsubmitted', { nav_hl });
@@ -184,7 +184,7 @@ app.post('/submitresource', catchAsync(async (req, res, next) => {
         range: "Submission of Resources",
         valueInputOption: "USER_ENTERED",
         resource: {
-            values: [[dateTime, name, email, num, org, categ, title, desc, link]],
+            values: [["Unread",dateTime, name, email, num, org, categ, title, desc, link]],
         },
     });
     res.render('bagotayo/formsubmitted', { nav_hl });
