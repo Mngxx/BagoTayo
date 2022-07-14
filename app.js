@@ -7,7 +7,6 @@ const ejsMate = require('ejs-mate')
 const methodOverride = require('method-override');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError = require('./utils/ExpressError');
-// const helmet = require('helmet')
 const { google } = require("googleapis");
 const spreadsheetId = process.env.SPREADSHEET_ID;
 
@@ -21,7 +20,6 @@ const auth = new google.auth.GoogleAuth({
 
 
 const app = express();
-//Static Files
 app.use(express.static(__dirname + '/public'));
 
 app.engine('ejs', ejsMate);
@@ -29,55 +27,6 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
-
-// const scriptSrcUrls = [
-//     "https://stackpath.bootstrapcdn.com/",
-//     "https://api.tiles.mapbox.com/",
-//     "https://api.mapbox.com/",
-//     "https://kit.fontawesome.com/",
-//     "https://cdnjs.cloudflare.com/",
-//     "https://cdn.jsdelivr.net/",
-//     "https://unpkg.com",
-// ];
-// const styleSrcUrls = [
-//     "https://kit-free.fontawesome.com/",
-//     "https://stackpath.bootstrapcdn.com/",
-//     "https://api.mapbox.com/",
-//     "https://api.tiles.mapbox.com/",
-//     "https://fonts.googleapis.com/",
-//     "https://use.fontawesome.com/",
-//     "https://cdn.jsdelivr.net/",
-//     "https://unpkg.com",
-// ];
-// const connectSrcUrls = [
-//     "https://*.tiles.mapbox.com",
-//     "https://api.mapbox.com",
-//     "https://events.mapbox.com",
-//     "https://www.youtube.com",
-// ];
-
-// app.use(
-//     helmet.contentSecurityPolicy({
-//         directives: {
-//             defaultSrc: [],
-//             connectSrc: ["'self'", ...connectSrcUrls],
-//             scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
-//             styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
-//             workerSrc: ["'self'", "blob:"],
-//             objectSrc: [],
-//             imgSrc: [
-//                 "'self'",
-//                 "blob:",
-//                 "data:",
-//                 `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/`, //SHOULD MATCH YOUR CLOUDINARY ACCOUNT!
-//                 "https://images.unsplash.com/"
-//             ],
-//             frameSrc: ["https://www.youtube.com/"],
-//             mediaSrc: ['https://youtu.be/', 'https://www.youtube.com/embed/', 'https://www.youtube.com/'],
-//             childSrc: ["blob:"]
-//         }
-//     })
-// );
 
 async function getData(sheet) {
     const client = await auth.getClient();
